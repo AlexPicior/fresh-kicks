@@ -1,11 +1,10 @@
 const Pool = require('pg').Pool;
 
 const pool = new Pool({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'ecommerce_db',
-    password: '1234',
-    port: 5432, 
+    connectionString : "postgres://default:7uymOrxfa6vK@ep-mute-wind-038381-pooler.eu-central-1.postgres.vercel-storage.com:5432/verceldb",
+    ssl: {
+        rejectUnauthorized: false, 
+      },
     }
 );
 

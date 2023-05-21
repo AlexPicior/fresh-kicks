@@ -3,6 +3,7 @@ const next = require("next");
 const passport = require('passport');
 const flash = require('express-flash');
 const session = require('express-session');
+const pool = require('./routes/db');
 const Sequelize = require("sequelize");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 const sequelize = new Sequelize('ecommerce_db', 'postgres', '1234', {
@@ -22,6 +23,15 @@ app
   .prepare()
   .then(() => {
     const server = express();
+    pool.connect()
+    .then(() => {
+      console.log('Connected to the database');
+      // Perform database operations here
+    })
+    .catch((err) => {
+      console.error('Error connecting to the database', err);
+    });
+
     const showRoutes = require("./routes/index.js");
 
     server.use(express.json());
@@ -57,3 +67,4 @@ app
     console.error(ex.stack);
     process.exit(1);
   });
+
