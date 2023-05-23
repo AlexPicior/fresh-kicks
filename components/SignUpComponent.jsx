@@ -18,7 +18,7 @@ const SignUpComponent = () => {
         if (calledPush) {
             return; 
           }
-        fetch(`http://localhost:3000/api/isAuth`)
+        fetch(`https://fresh-kicks.vercel.app/api/isAuth`)
         .then(response => {
             if(response.redirected)
             {
@@ -37,7 +37,7 @@ const SignUpComponent = () => {
     }, [])
     const sendCredentials = () =>{
         setErrMessage("");
-        fetch('http://localhost:3000/api/createAccount',{
+        fetch('https://fresh-kicks.vercel.app/api/createAccount',{
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

@@ -16,7 +16,7 @@ const ProfileComponent = () => {
             return; 
           }
         const verifyAuth = async ()=>{
-            fetch(`http://localhost:3000/api/isNotAuth`)
+            fetch(`https://fresh-kicks.vercel.app/api/isNotAuth`)
             .then(response => {
                 if(response.redirected)
                 {
@@ -41,7 +41,7 @@ const ProfileComponent = () => {
     useEffect(()=>{
         if(isBusy){
             
-            fetch('http://localhost:3000/api/user/profile')
+            fetch('https://fresh-kicks.vercel.app/api/user/profile')
             .then(response => response.json())
             .then(json =>{
                 if(!json.errMessage) setInfo(json);

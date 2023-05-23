@@ -84,7 +84,7 @@ const ProductDetailsSection = ({ product }) => {
   }, [product]);
 
   useEffect(() =>{
-    fetch(`http://localhost:3000/api/reviews/${product.id}`)
+    fetch(`https://fresh-kicks.vercel.app/api/reviews/${product.id}`)
     .then(response => response.json())
     .then(json =>{ 
       setReviews(json);

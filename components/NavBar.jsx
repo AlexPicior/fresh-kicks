@@ -18,7 +18,7 @@ const NavBar = () => {
 
 
   useEffect(() =>{
-    fetch('http://localhost:3000/api/user')
+    fetch('https://fresh-kicks.vercel.app/api/user')
     .then(response => response.json())
     .then(json =>{ 
       if(!json.errMessage)
@@ -27,7 +27,7 @@ const NavBar = () => {
       }
     });
 
-    fetch('http://localhost:3000/api/user/profile')
+    fetch('https://fresh-kicks.vercel.app/api/user/profile')
     .then(response => response.json())
     .then(json =>{
         if(!json.errMessage) setUserName(json.name);

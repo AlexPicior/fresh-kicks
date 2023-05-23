@@ -15,7 +15,7 @@ const EditProfileComponent = () => {
         if (calledPush) {
             return; 
           }
-        fetch(`http://localhost:3000/api/isNotAuth`)
+        fetch(`https://fresh-kicks.vercel.app/api/isNotAuth`)
         .then(response => {
             if(response.redirected)
             {
@@ -37,7 +37,7 @@ const EditProfileComponent = () => {
     useEffect(()=>{
         if(isBusy){
             
-            fetch('http://localhost:3000/api/user/profile')
+            fetch('https://fresh-kicks.vercel.app/api/user/profile')
             .then(response => response.json())
             .then(json =>{
                 if(!json.errMessage) setInfo(json);
@@ -53,7 +53,7 @@ const EditProfileComponent = () => {
         if(info.address == null) info.address = "null";
         if(info.zip_code == null) info.zip_code = "null";
 
-        fetch('http://localhost:3000/api/user/profile/edit',{
+        fetch('https://fresh-kicks.vercel.app/api/user/profile/edit',{
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

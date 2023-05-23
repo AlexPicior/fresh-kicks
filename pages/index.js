@@ -5,7 +5,7 @@ export const Home = () => {
   
   const [products, setProducts] = useState(null);
   useEffect(() =>{
-    fetch('http://localhost:3000/api/products')
+    fetch('https://fresh-kicks.vercel.app/api/products')
     .then(response => response.json())
     .then(json =>{ 
       setProducts(json);
@@ -26,7 +26,7 @@ export const Home = () => {
 /*
 export const getServerSideProps = async () =>{
   let products = [];
-  fetch('http://localhost:3000/api/products')
+  fetch('https://fresh-kicks.vercel.app/api/products')
   .then(response => response.json())
   .then(json => {
     products = [...json];

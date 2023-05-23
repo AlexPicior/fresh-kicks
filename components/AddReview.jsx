@@ -23,7 +23,7 @@ const AddReview = ({productId}) => {
         }
         review.stars = nrStars;
         
-        fetch('http://localhost:3000/api/review',{
+        fetch('https://fresh-kicks.vercel.app/api/review',{
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
