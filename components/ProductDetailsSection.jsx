@@ -47,6 +47,9 @@ const ProductDetailsSection = ({ product }) => {
       case 3:
         color = "Red";
         break;
+      case 4:
+        color = "Green";
+        break;
     }
 
     switch(brand){
