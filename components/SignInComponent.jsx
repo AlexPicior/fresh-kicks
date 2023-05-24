@@ -15,7 +15,7 @@ const SignInComponent = () => {
       if (calledPush) {
           return; 
         }
-      fetch(`https://fresh-kicks.vercel.app/api/isAuth`)
+      fetch(`https://fresh-kicks-server.herokuapp.com/api/isAuth`)
       .then(response => {
           if(response.redirected)
           {
@@ -38,7 +38,7 @@ const SignInComponent = () => {
 
   const sendCredentials = () =>{
     setErrMessage("");
-    fetch('https://fresh-kicks.vercel.app/api/login',{
+    fetch('https://fresh-kicks-server.herokuapp.com/api/login',{
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -48,8 +48,8 @@ const SignInComponent = () => {
     .then(response => {
       if(response.url)
       {
-        if (response.url == "https://fresh-kicks.vercel.app/sign_in") setErrMessage("Email or password incorrect");
-        else if(response.url == "https://fresh-kicks.vercel.app/") 
+        if (response.url == "https://fresh-kicks-server.herokuapp.com/sign_in") setErrMessage("Email or password incorrect");
+        else if(response.url == "https://fresh-kicks-server.herokuapp.com/") 
         {
           router.push({
             pathname: '/',

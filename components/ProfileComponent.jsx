@@ -16,7 +16,7 @@ const ProfileComponent = () => {
             return; 
           }
         const verifyAuth = async ()=>{
-            fetch(`https://fresh-kicks.vercel.app/api/isNotAuth`)
+            fetch(`https://fresh-kicks-server.herokuapp.com/api/isNotAuth`)
             .then(response => {
                 if(response.redirected)
                 {
@@ -41,7 +41,7 @@ const ProfileComponent = () => {
     useEffect(()=>{
         if(isBusy){
             
-            fetch('https://fresh-kicks.vercel.app/api/user/profile')
+            fetch('https://fresh-kicks-server.herokuapp.com/api/user/profile')
             .then(response => response.json())
             .then(json =>{
                 if(!json.errMessage) setInfo(json);

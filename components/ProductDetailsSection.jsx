@@ -11,7 +11,7 @@ const ProductDetailsSection = ({ product }) => {
     if(check) return true;
     else return false;
   }
-  
+
   const convert = (product) =>{
     let {name, price, age_type, gender, color, images, brand} = product;
 
@@ -88,7 +88,7 @@ const ProductDetailsSection = ({ product }) => {
   }, [product]);
 
   useEffect(() =>{
-    fetch(`https://fresh-kicks.vercel.app/api/reviews/${product.id}`)
+    fetch(`https://fresh-kicks-server.herokuapp.com/api/reviews/${product.id}`)
     .then(response => response.json())
     .then(json =>{ 
       setReviews(json);
