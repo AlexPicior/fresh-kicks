@@ -26,7 +26,7 @@ app
     pool.connect()
     .then(() => {
       console.log('Connected to the database');
-      // Perform database operations here
+      
     })
     .catch((err) => {
       console.error('Error connecting to the database', err);
