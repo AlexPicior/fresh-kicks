@@ -11,6 +11,7 @@ const ProductDetailsSection = ({ product }) => {
     if(check) return true;
     else return false;
   }
+  
   const convert = (product) =>{
     let {name, price, age_type, gender, color, images, brand} = product;
 
