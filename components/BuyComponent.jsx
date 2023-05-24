@@ -32,7 +32,7 @@ const BuyComponent = () => {
         if(userName == "")
         {
             setAuth(false);
-            
+            setBusy(true);
         }
         else
         {
