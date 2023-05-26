@@ -18,7 +18,7 @@ const NavBar = () => {
 
 
   useEffect(() =>{
-    fetch('https://fresh-kicks-server.herokuapp.com/api/user')
+    fetch('https://fresh-kicks-project.herokuapp.com/api/user')
     .then(response => response.json())
     .then(json =>{ 
       if(!json.errMessage)
@@ -27,7 +27,7 @@ const NavBar = () => {
       }
     });
 
-    fetch('https://fresh-kicks-server.herokuapp.com/api/user/profile')
+    fetch('https://fresh-kicks-project.herokuapp.com/api/user/profile')
     .then(response => response.json())
     .then(json =>{
         if(!json.errMessage) setUserName(json.name);

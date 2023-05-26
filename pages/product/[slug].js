@@ -12,7 +12,7 @@ function ProductDetails({product, similarProducts}) {
 
 export const getStaticPaths = async () => {
   let products = [];
-  fetch(`https://fresh-kicks-server.herokuapp.com/api/products`)
+  fetch(`https://fresh-kicks-project.herokuapp.com/api/products`)
   .then(response => response.json())
   .then(json =>{ 
     products = [...json];
@@ -31,10 +31,10 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async ({params:{slug}}) => {
-  const getProductRes = await fetch(`https://fresh-kicks-server.herokuapp.com/api/products/${slug}`);
+  const getProductRes = await fetch(`https://fresh-kicks-project.herokuapp.com/api/products/${slug}`);
   const product = await getProductRes.json();
 
-  const getSimilarProductsRes = await fetch(`https://fresh-kicks-server.herokuapp.com/api/products/${product.slug}/${product.brand}`);
+  const getSimilarProductsRes = await fetch(`https://fresh-kicks-project.herokuapp.com/api/products/${product.slug}/${product.brand}`);
   let similarProducts = await getSimilarProductsRes.json();
   similarProducts = similarProducts.slice(-7);
 

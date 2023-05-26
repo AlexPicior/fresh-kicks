@@ -36,7 +36,7 @@ const BuyComponent = () => {
         }
         else
         {
-            fetch('https://fresh-kicks-server.herokuapp.com/api/user/profile')
+            fetch('https://fresh-kicks-project.herokuapp.com/api/user/profile')
             .then(response => response.json())
             .then(json =>{
                 if(!json.errMessage) {
@@ -64,7 +64,7 @@ const BuyComponent = () => {
             if(info.address == null) info.address = "null";
             if(info.zip_code == null) info.zip_code = "null";
 
-            fetch('https://fresh-kicks-server.herokuapp.com/api/user/profile/edit',{
+            fetch('https://fresh-kicks-project.herokuapp.com/api/user/profile/edit',{
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

@@ -88,7 +88,7 @@ const ProductDetailsSection = ({ product }) => {
   }, [product]);
 
   useEffect(() =>{
-    fetch(`https://fresh-kicks-server.herokuapp.com/api/reviews/${product.id}`)
+    fetch(`https://fresh-kicks-project.herokuapp.com/api/reviews/${product.id}`)
     .then(response => response.json())
     .then(json =>{ 
       setReviews(json);
