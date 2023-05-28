@@ -24,13 +24,13 @@ const Cart = () => {
           </div>
 
           {cartItems.length < 1 && (
-            <div className='flex justify-center content-center flex-wrap h-[500px]'>
+            <div className='flex justify-center content-center flex-wrap xs:h-[500px] xxl:h-[70vh]'>
               <span className='text-2xl text-slate-300'>Your cart is empty</span>
             </div>
           )}
           {cartItems.length >= 1 && (
             <div>
-              <div className='mt-10 overflow-y-auto xs:h-[70vh] lg:h-[65vh] xxl:h-[80vh]'>
+              <div className='mt-10 overflow-y-auto xs:h-[70vh] lg:h-[65vh] xxl:h-[70vh]'>
                 {cartItems.map((item, index) => <CartItem key={index} item={item}/>)}
               </div>
               <div className='flex xs:mt-0 lg:mt-10 mb-3'>
