@@ -30,7 +30,7 @@ const Cart = () => {
           )}
           {cartItems.length >= 1 && (
             <div>
-              <div className='mt-10 overflow-y-auto h-[470px]'>
+              <div className='mt-10 overflow-y-auto xs:h-[70vh] lg:h-[65vh] xxl:h-[80vh]'>
                 {cartItems.map((item, index) => <CartItem key={index} item={item}/>)}
               </div>
               <div className='flex xs:mt-0 lg:mt-10 mb-3'>

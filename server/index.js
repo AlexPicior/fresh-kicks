@@ -32,6 +32,8 @@ app
       console.error('Error connecting to the database', err);
     });
 
+    
+
     const showRoutes = require("./routes/index.js");
 
     server.use(express.json());
@@ -64,6 +66,7 @@ app
     });
   })
   .catch(ex => {
+    console.log(intra);
     console.error(ex.stack);
     process.exit(1);
   });

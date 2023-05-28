@@ -121,7 +121,7 @@ const ProductDetailsSection = ({ product }) => {
   return (
     <div className='flex xs:flex-col lg:flex-row xs:h-[1200px] lg:h-[750px] w-full mt-16 xs:px-3 ss:px-10'>
         <div className='lg:pl-20'>
-            <img className='xs:w-[350px] lg:w-[600px] xs:h-[80%] lg:h-[550px]' src={image} alt="" />
+            <img className='xs:w-[350px] lg:w-[550px] xs:h-[80%] lg:h-[550px]' src={image} alt="" />
             <div className='flex mt-5 justify-evenly xs:w-[300px] lg:w-[400px]'>
                 <img className='xs:w-12 lg:w-16' onMouseEnter={() => setImage(images[0])} src={images[0]} alt="" />
                 <img className='xs:w-12 lg:w-16' onMouseEnter={() => setImage(images[1])} src={images[1]} alt="" />
