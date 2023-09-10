@@ -16,7 +16,7 @@ const ProfileComponent = () => {
             return; 
           }
         const verifyAuth = async ()=>{
-            fetch(`https://fresh-kicks-project.herokuapp.com/api/isNotAuth`)
+            fetch(`fresh-kicks.up.railway.app/api/isNotAuth`)
             .then(response => {
                 if(response.redirected)
                 {
@@ -41,7 +41,7 @@ const ProfileComponent = () => {
     useEffect(()=>{
         if(isBusy){
             
-            fetch('https://fresh-kicks-project.herokuapp.com/api/user/profile')
+            fetch('fresh-kicks.up.railway.app/api/user/profile')
             .then(response => response.json())
             .then(json =>{
                 if(!json.errMessage) setInfo(json);

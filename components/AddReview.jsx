@@ -23,7 +23,7 @@ const AddReview = ({productId}) => {
         }
         review.stars = nrStars;
         
-        fetch('https://fresh-kicks-project.herokuapp.com/api/review',{
+        fetch('fresh-kicks.up.railway.app/api/review',{
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
