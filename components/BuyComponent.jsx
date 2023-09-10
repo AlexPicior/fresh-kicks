@@ -36,7 +36,7 @@ const BuyComponent = () => {
         }
         else
         {
-            fetch('fresh-kicks.up.railway.app/api/user/profile')
+            fetch('fresh-kicks-be-production.up.railway.app/api/user/profile')
             .then(response => response.json())
             .then(json =>{
                 if(!json.errMessage) {
@@ -64,7 +64,7 @@ const BuyComponent = () => {
             if(info.address == null) info.address = "null";
             if(info.zip_code == null) info.zip_code = "null";
 
-            fetch('fresh-kicks.up.railway.app/api/user/profile/edit',{
+            fetch('fresh-kicks-be-production.up.railway.app/api/user/profile/edit',{
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

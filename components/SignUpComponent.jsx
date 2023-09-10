@@ -18,7 +18,7 @@ const SignUpComponent = () => {
         if (calledPush) {
             return; 
           }
-        fetch(`fresh-kicks.up.railway.app/api/isAuth`)
+        fetch(`fresh-kicks-be-production.up.railway.app/api/isAuth`)
         .then(response => {
             if(response.redirected)
             {
@@ -37,7 +37,7 @@ const SignUpComponent = () => {
     }, [])
     const sendCredentials = () =>{
         setErrMessage("");
-        fetch('fresh-kicks.up.railway.app/api/createAccount',{
+        fetch('fresh-kicks-be-production.up.railway.app/api/createAccount',{
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
