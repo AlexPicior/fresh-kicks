@@ -18,8 +18,10 @@ const ProfileComponent = () => {
         const verifyAuth = async ()=>{
             fetch(`https://fresh-kicks-be-production.up.railway.app/api/isNotAuth`)
             .then(response => {
+                console.log("aici1")
                 if(response.redirected)
                 {
+                    console.log("aici2")
                     router.push({
                         pathname: "https://fresh-kicks.up.railway.app/sign_in",
                     });
