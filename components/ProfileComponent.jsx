@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { ColorRing } from 'react-loader-spinner';
+import { json } from 'sequelize';
 
 
 
@@ -17,9 +18,9 @@ const ProfileComponent = () => {
           }
         const verifyAuth = async ()=>{
             fetch(`https://fresh-kicks-be-production.up.railway.app/api/isNotAuth`)
-            .then(response => {
-                console.log(response)
-                if(false)
+            .then(response => response.json())
+            .then(json => {
+                if(json.msg == "redirect")
                 {
                     console.log("aici2")
                     router.push({
@@ -30,7 +31,6 @@ const ProfileComponent = () => {
                 {
                     setBusy(true);
                 }
-                
             })
             setCalledPush(true);
         }
