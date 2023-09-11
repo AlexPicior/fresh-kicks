@@ -20,7 +20,7 @@ const EditProfileComponent = () => {
             if(response.redirected)
             {
                 router.push({
-                    pathname: response.url,
+                    pathname: "https://fresh-kicks.up.railway.app/sign_in",
                 });
                 
             }
