@@ -18,9 +18,9 @@ const ProfileComponent = () => {
           }
         const verifyAuth = async ()=>{
             fetch(`https://fresh-kicks-be-production.up.railway.app/api/isNotAuth`)
-            .then(response => response.json())
-            .then(json => {
-                if(json.msg == "redirect")
+            .then(response => {
+                console.log("aici1")
+                if(response.redirected)
                 {
                     console.log("aici2")
                     router.push({
@@ -34,6 +34,7 @@ const ProfileComponent = () => {
             })
             setCalledPush(true);
         }
+        console.log("aici3")
         verifyAuth();
         
         
