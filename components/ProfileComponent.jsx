@@ -2,10 +2,6 @@ import React, {useState, useEffect} from 'react'
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { ColorRing } from 'react-loader-spinner';
-import { json } from 'sequelize';
-
-
-
 
 const ProfileComponent = () => {
     const router = useRouter();

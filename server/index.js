@@ -4,12 +4,6 @@ const passport = require('passport');
 const flash = require('express-flash');
 const session = require('express-session');
 const pool = require('./routes/db');
-const Sequelize = require("sequelize");
-const SequelizeStore = require("connect-session-sequelize")(session.Store);
-const sequelize = new Sequelize('ecommerce_db', 'postgres', '1234', {
-  host: 'localhost',
-  dialect: 'postgres'
-});
 const {getUserByEmail, getUserById} = require('./get_from_accounts_db');
 const initializePassport = require('./passport_config');
 initializePassport(passport, getUserByEmail, getUserById);

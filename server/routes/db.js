@@ -1,7 +1,7 @@
 const Pool = require('pg').Pool;
 
 const pool = new Pool({
-    connectionString : "postgres://postgres:t0s8XxyxstHDemdaBJMg@containers-us-west-63.railway.app:7210/railway",
+    connectionString : "postgresql://postgres:t0s8XxyxstHDemdaBJMg@containers-us-west-63.railway.app:7210/railway",
     ssl: {
         rejectUnauthorized: false, 
     }, 
