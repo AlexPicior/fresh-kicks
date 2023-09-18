@@ -20,7 +20,7 @@ const SignInComponent = () => {
           if(response.redirected)
           {
               router.push({
-                  pathname: "https://fresh-kicks.up.railway.app/profile",
+                  pathname: response.url,
               });
               
           }
