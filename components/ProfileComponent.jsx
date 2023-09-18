@@ -34,7 +34,7 @@ const ProfileComponent = () => {
             })
             setCalledPush(true);
         }
-        console.log("aici3")
+        
         verifyAuth();
         
         
