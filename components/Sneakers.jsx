@@ -355,7 +355,7 @@ const Sneakers = () => {
         (!query.price) ? price = "all" : price = query.price;
         if (!query.sort_by) query.sort_by = "Newest";
         (!query.search) ? search = "all" : search = query.search;
-        fetch(`https://fresh-kicks-be-production.up.railway.app/api/products/${age_type}/${brand}/${gender}/${size}/${price}/${query.sort_by}/${search}`)
+        fetch(`fresh-kicks-be-production.up.railway.app/api/products/${age_type}/${brand}/${gender}/${size}/${price}/${query.sort_by}/${search}`)
         .then(response => response.json())
         .then(json =>{ 
             setProducts(json);

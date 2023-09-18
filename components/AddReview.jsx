@@ -23,7 +23,7 @@ const AddReview = ({productId}) => {
         }
         review.stars = nrStars;
         
-        fetch('https://fresh-kicks-be-production.up.railway.app/api/review',{
+        fetch('fresh-kicks-be-production.up.railway.app/api/review',{
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
