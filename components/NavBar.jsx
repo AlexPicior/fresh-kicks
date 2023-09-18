@@ -18,7 +18,7 @@ const NavBar = () => {
 
 
   useEffect(() =>{
-    fetch('fresh-kicks-be-production.up.railway.app/api/user')
+    fetch('https://fresh-kicks.up.railway.app/api/user')
     .then(response => response.json())
     .then(json =>{ 
       if(!json.errMessage)
@@ -27,7 +27,7 @@ const NavBar = () => {
       }
     });
 
-    fetch('fresh-kicks-be-production.up.railway.app/api/user/profile')
+    fetch('https://fresh-kicks.up.railway.app/api/user/profile')
     .then(response => response.json())
     .then(json =>{
         if(!json.errMessage) setUserName(json.name);

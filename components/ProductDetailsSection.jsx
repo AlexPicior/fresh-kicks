@@ -88,7 +88,7 @@ const ProductDetailsSection = ({ product }) => {
   }, [product]);
 
   useEffect(() =>{
-    fetch(`fresh-kicks-be-production.up.railway.app/api/reviews/${product.id}`)
+    fetch(`https://fresh-kicks.up.railway.app/api/reviews/${product.id}`)
     .then(response => response.json())
     .then(json =>{ 
       setReviews(json);

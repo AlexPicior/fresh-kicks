@@ -5,7 +5,7 @@ export const Home = () => {
   
   const [products, setProducts] = useState(null);
   useEffect(() =>{
-    fetch('fresh-kicks-be-production.up.railway.app/api/products')
+    fetch('https://fresh-kicks.up.railway.app/api/products')
     .then(response => response.json())
     .then(json =>{ 
       setProducts(json);
@@ -26,7 +26,7 @@ export const Home = () => {
 /*
 export const getServerSideProps = async () =>{
   let products = [];
-  fetch('fresh-kicks-be-production.up.railway.app/api/products')
+  fetch('https://fresh-kicks.up.railway.app/api/products')
   .then(response => response.json())
   .then(json => {
     products = [...json];

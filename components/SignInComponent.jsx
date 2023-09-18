@@ -15,7 +15,7 @@ const SignInComponent = () => {
       if (calledPush) {
           return; 
         }
-      fetch(`fresh-kicks-be-production.up.railway.app/api/isAuth`)
+      fetch(`https://fresh-kicks.up.railway.app/api/isAuth`)
       .then(response => {
           if(response.redirected)
           {
@@ -38,7 +38,7 @@ const SignInComponent = () => {
 
   const sendCredentials = () =>{
     setErrMessage("");
-    fetch('fresh-kicks-be-production.up.railway.app/api/login',{
+    fetch('https://fresh-kicks.up.railway.app/api/login',{
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -48,8 +48,8 @@ const SignInComponent = () => {
     .then(response => {
       if(response.url)
       {
-        if (response.url == "fresh-kicks-be-production.up.railway.app/sign_in") setErrMessage("Email or password incorrect");
-        else if(response.url == "fresh-kicks-be-production.up.railway.app/") 
+        if (response.url == "https://fresh-kicks.up.railway.app/sign_in") setErrMessage("Email or password incorrect");
+        else if(response.url == "https://fresh-kicks.up.railway.app/") 
         {
           router.push({
             pathname: '/',
